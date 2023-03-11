@@ -2,6 +2,7 @@ import { Link } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import { FaAlignJustify } from 'react-icons/fa';
+import logo from '../../assets/images/logo.svg';
 
 const NavBar = () => {
   const [show, setShow] = useState(false);
@@ -15,10 +16,7 @@ const NavBar = () => {
       <div className="nav-center">
         <div className="nav-header">
           <Link to="/">
-            <StaticImage
-              src="../../assets/images/logo.svg"
-              alt="simply recipes"
-            />
+            <img src={logo} alt="simply recipes" />
           </Link>
           <button className="nav-btn" onClick={() => handleShow(!show)}>
             <FaAlignJustify />
