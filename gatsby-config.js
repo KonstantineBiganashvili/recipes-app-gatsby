@@ -1,36 +1,16 @@
 /**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
- */
-
-/**
  * @type {import('gatsby').GatsbyConfig}
  */
+
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: 'Simply Recipes',
     description: 'Nice and clean recipes site',
     author: '@KonstantineBiganashvili',
-    person: {
-      name: 'Konstantine',
-      age: 24,
-    },
-    simpleData: ['item1', 'item2'],
-    complexData: [
-      {
-        name: 'Sdsdasd',
-        age: 323,
-      },
-      {
-        name: 'ghdfgdgdfgdfgdf',
-        age: 676,
-      },
-      {
-        name: 'jhfhfg',
-        age: 867,
-      },
-    ],
   },
 
   plugins: [
@@ -38,5 +18,19 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/assets/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_API_KEY,
+      },
+    },
   ],
 };

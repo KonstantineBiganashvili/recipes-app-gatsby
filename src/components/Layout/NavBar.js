@@ -1,5 +1,4 @@
 import { Link } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 import React, { useState } from 'react';
 import { FaAlignJustify } from 'react-icons/fa';
 import logo from '../../assets/images/logo.svg';

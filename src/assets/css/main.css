@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400");
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400|Inconsolata:400');
 *,
 ::after,
 ::before {
@@ -54,8 +54,8 @@
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
   /* typography */
   --defaultFontSize: 87.5%;
-  --headingFont: "Inconsolata", monospace;
-  --bodyFont: "Montserrat", sans-serif;
+  --headingFont: 'Inconsolata', monospace;
+  --bodyFont: 'Montserrat', sans-serif;
   --smallText: 0.8em;
   --extraSmallText: 0.7em;
   /* rest */
@@ -302,7 +302,7 @@ form > *:last-child {
 .form-loading::before {
   background: var(--white);
   position: absolute;
-  content: "";
+  content: '';
   height: 100%;
   width: 100%;
   top: 0;
@@ -317,7 +317,7 @@ form > *:last-child {
 }
 
 .form-loading::after {
-  content: "";
+  content: '';
   position: absolute;
   top: calc(50% - 3rem);
   left: calc(50% - 3rem);
@@ -515,6 +515,7 @@ form > *:last-child {
 .featured-recipes > h5 {
   text-align: center;
   max-width: 100%;
+  margin-top: 60px;
 }
 /*#########*/
 /* Hero */
