@@ -3,6 +3,7 @@ import Layout from '../components/Layout';
 import { StaticImage } from 'gatsby-plugin-image';
 import { Link, graphql } from 'gatsby';
 import RecipesList from '../components/RecipesList';
+import SEO from '../components/SEO';
 
 const About = ({
   data: {
@@ -11,6 +12,10 @@ const About = ({
 }) => {
   return (
     <Layout>
+      <SEO
+        title="About"
+        description="This is an about page of simply recipes"
+      />
       <main className="page">
         <section className="about-page">
           <article>
@@ -31,7 +36,7 @@ const About = ({
             src="../assets/images/about.jpeg"
             alt="Person puring salt in bowl"
             className="about-img"
-            placeholder="tracedSVG"
+            placeholder="dominantColor"
           />
         </section>
         <section className="featured-recipes">
